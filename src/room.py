@@ -15,5 +15,11 @@ class Room:
     def add_item(self, item):
         self.items.append(item)
 
-    def remove_item(self, item)
+    def remove_item(self, item):
         self.items.remove(item)
+
+    def print_items(self):
+        if len(self.items) == 0:
+            print("\nNo item available\n")
+        else:
+            print(f"\nYou see these items on the ground: {', '.join([item.name for item in self.items])}\n")
